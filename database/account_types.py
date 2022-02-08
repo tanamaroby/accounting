@@ -3,12 +3,17 @@ def get_account_type(account):
         liabilities = "Liabilities"
         equity = "Equity"
 
-        return {
-            "accounts receivable": assets,
-            "cash": assets,
-            "accounts payable": liabilities,
-            "service expense": equity,
-        }[account]
+        output = None
+        try :
+            output = {
+                "accounts receivable": assets,
+                "cash": assets,
+                "accounts payable": liabilities,
+                "service expense": equity,
+            }[account]
+            return output
+        except:
+            print(f"Unknown account name: {account}")
 
 def get_assets():
     return "Assets"

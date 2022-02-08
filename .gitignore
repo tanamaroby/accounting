@@ -105,7 +105,6 @@ dist
 
 # Worksheet
 ~$worksheet.xlsx
-worksheet.xlsx
 
 # Python
 __pycache__

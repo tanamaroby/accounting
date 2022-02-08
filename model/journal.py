@@ -10,7 +10,6 @@ class journal:
 
     def store_journal(self, name, cat, is_debit, value, time):
         new_entry = entry(name, is_debit, value, time)
-
         # Storing in specific account types
         if cat not in self.journal:
             self.journal[cat] = category(cat)

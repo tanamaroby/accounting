@@ -7,4 +7,4 @@ class entry:
 
     def __str__(self):
         account_type = "Debit" if self.is_debit else "Credit"
-        return f"{account_type} {self.name} with value {self.value} at time {self.time}"
+        return f"{account_type} {self.name} {self.value}"

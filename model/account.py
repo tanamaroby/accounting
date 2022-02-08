@@ -5,10 +5,11 @@ class account:
         self.total = 0
 
     def add_entry(self, entry):
-        self.total = self.total + entry.value
+        self.total = self.total + entry.value if entry.is_debit else self.total - entry.value
         self.entries.append(entry)
 
     def print_account(self):
         print(f"\t{self.name}")
         for entry in self.entries:
             print(f"\t\t{entry}")
+        print(f"\t\tTOTAL: {self.total}")

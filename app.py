@@ -25,7 +25,7 @@ for row in df_array:
     value = row[2] if is_debit else row[3]
     time = previous_time if pd.isnull(row[0]) else row[0]
     input_string = row[1].split()
-    category = category_mapping[input_string[-1][1:-1]]
+    category = category_mapping[input_string[-1][1:-1].upper()]
     name = ' '.join(input_string[0:-1])
     data.store_journal(name, category, is_debit, value, time)
     previous_time = time
